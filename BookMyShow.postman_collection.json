@@ -1,0 +1,286 @@
+{
+	"info": {
+		"_postman_id": "5149f0c1-afd5-4092-914f-1f19d4492a1f",
+		"name": "BookMyShow",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21846366"
+	},
+	"item": [
+		{
+			"name": "AddTheatreWithScreenAndSeats",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"theatreName\": \"Miraj Cinemas\",\r\n    \"city\": \"Mumbai\",\r\n    \"location\": \"RMall, Mulund\",\r\n    \"screen\": \r\n            [\r\n                {\r\n                    \"screenName\" : \"Screen1\", \r\n                    \"noOfSeats\" : \"50\",\r\n                    \"seat\": \r\n                    [\r\n                        {\r\n                            \"seatNumber\": \"A1\",\r\n                            \"isBooked\": false,\r\n                            \"price\": 200\r\n                        },\r\n                        {\r\n                            \"seatNumber\": \"A2\",\r\n                            \"isBooked\": false,\r\n                            \"price\": 200\r\n                        }\r\n                    ]\r\n                }\r\n            ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/theatre",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"theatre"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTheatre",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/theatre",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"theatre"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetScreen",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/screen",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"screen"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddScreenWithSeats",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"theatreId\": \"1\",\r\n    \"screenName\": \"Screen2\",\r\n    \"noOfSeats\": \"60\",\r\n    \"seat\": \r\n    [\r\n        {\r\n            \"seatNumber\": \"A1\",\r\n            \"isBooked\": false,\r\n            \"price\": 200\r\n        },\r\n        {\r\n            \"seatNumber\": \"A2\",\r\n            \"isBooked\": false,\r\n            \"price\": 200\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/screen",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"screen"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddSeat",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"screenId\": 52,\r\n    \"seatNumber\": \"A3\",\r\n    \"isBooked\": false,\r\n    \"price\": 200\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/seat",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"seat"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetSeat",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/seat",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"seat"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddMovie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movieName\" : \"Shivrayancha Chava\",\r\n    \"movieLanguage\": \"Marathi\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/movie",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"movie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetMovie",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/movie",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"movie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddShow",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"theatreId\": 1,\r\n    \"movieId\": 1,\r\n    \"showDate\": \"2024-02-02\",\r\n    \"showTime\": \"16:00\",\r\n    \"showStatus\": \"Available\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/show",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"show"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BookTicket",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"theatreId\": 1,\r\n    \"movieId\": 1,\r\n    \"showId\": 1,\r\n    \"seatId\": [1]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/ticket",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"ticket"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTicket",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/ticket/102",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"ticket",
+						"102"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
